@@ -1,0 +1,10 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.example.template.mixin",
+  "refmap": "refmap.client.json",
+  "mixins": [
+    "MixinExample"
+  ],
+  "client": [],
+  "server": []
+}

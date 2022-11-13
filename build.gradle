@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'io.github'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url "https://repo.spongepowered.org/repository/maven-public/"
+    }
+    maven {
+        name = 'minecraft'
+        url = 'https://libraries.minecraft.net/'
+    }
+
+    mavenCentral()
+}
+
+def asmVersion = "9.4"
+
+dependencies {
+    implementation files('libs/lwjgl.jar', 'libs/minecraft_beta_1.1_b2.jar', 'libs/lwjgl_util.jar', 'libs/alpha_libs.jar', 'libs/launchwrapper-1.12.jar')
+
+    implementation 'com.google.guava:guava:21.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+    implementation 'net.sf.jopt-simple:jopt-simple:6.0-alpha-3'
+
+    implementation "org.ow2.asm:asm:$asmVersion"
+    implementation "org.ow2.asm:asm-analysis:$asmVersion"
+    implementation "org.ow2.asm:asm-commons:$asmVersion"
+    implementation "org.ow2.asm:asm-tree:$asmVersion"
+    implementation "org.ow2.asm:asm-util:$asmVersion"
+
+    annotationProcessor "org.ow2.asm:asm:$asmVersion"
+    annotationProcessor "org.ow2.asm:asm-analysis:$asmVersion"
+    annotationProcessor "org.ow2.asm:asm-commons:$asmVersion"
+    annotationProcessor "org.ow2.asm:asm-tree:$asmVersion"
+    annotationProcessor "org.ow2.asm:asm-util:$asmVersion"
+
+}
