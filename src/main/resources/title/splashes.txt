@@ -1,4 +1,3 @@
-Pre-beta!
 As seen on TV!
 Awesome!
 100% pure!
@@ -27,7 +26,6 @@ Uses LWJGL!
 Reticulating splines!
 Minecraft!
 Yaaay!
-Alpha version!
 Singleplayer!
 Keyboard compatible!
 Undocumented!
@@ -45,8 +43,6 @@ Closed source!
 Classy!
 Wow!
 Not on steam!
-9.95 euro!
-Half price!
 Oh man!
 Check it out!
 Awesome community!
@@ -180,6 +176,7 @@ Woo, tigsource!
 Woo, minecraftforum!
 Woo, worldofminecraft!
 Woo, reddit!
+Woo, 2pp!
 Google anlyticsed!
 Now supports åäö!
 Give us Gordon!
@@ -221,4 +218,9 @@ Treatment for your rash!
 "Noun" is an autonym!
 Information wants to be free!
 "Almost never" is an interesting concept!
- 
+Lots of truthiness!
+The creeper is a spy!
+Turing complete!
+It's groundbreaking!
+Let our battle's begin!
+The sky is the limit!
