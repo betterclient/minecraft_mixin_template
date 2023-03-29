@@ -18,7 +18,7 @@ public class MixinExample extends GuiScreen {
 
 
     @Inject(method = "initGui", at = @At("RETURN"))
-    public void initGui(CallbackInfo ci) {// Allows playing in alpha place
-        this.mc.session = new Session("BetterClient", "token:<ACCESS TOKEN>:<PROFILE ID>");
+    public void initGui(CallbackInfo ci) {
+        this.mc.session = new Session("Player", "");
     }
 }

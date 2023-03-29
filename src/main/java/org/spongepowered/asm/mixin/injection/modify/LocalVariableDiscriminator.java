@@ -55,7 +55,7 @@ public class LocalVariableDiscriminator {
      * Discriminator context information, wraps all relevant information about
      * a target location for use when performing discrimination
      */
-    public static class Context implements org.spongepowered.asm.util.PrettyPrinter.IPrettyPrintable {
+    public static class Context implements PrettyPrinter.IPrettyPrintable {
         
         /**
          * Information about a local variable in the LVT, used during

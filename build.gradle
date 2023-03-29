@@ -1,3 +1,6 @@
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+
 plugins {
     id 'java'
 }
@@ -20,11 +23,25 @@ repositories {
 def asmVersion = "9.4"
 
 dependencies {
-    implementation files('libs/lwjgl.jar', 'libs/minecraft_beta_1.1_b2.jar', 'libs/lwjgl_util.jar', 'libs/alpha_libs.jar', 'libs/launchwrapper-1.12.jar')
+    implementation files('libs/lwjgl.jar', 'libs/minecraft_beta_1.1_b2.jar', 'libs/lwjgl_util.jar', 'libs/alpha_libs.jar')
 
     implementation 'com.google.guava:guava:21.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
     implementation 'net.sf.jopt-simple:jopt-simple:6.0-alpha-3'
+
+    File f = file("quixotic.jar") as File
+    f.createNewFile()
+
+    def is = new URL("https://github.com/betterclient/quixotic-Loader/releases/latest/download/Quixotic-1.0.jar").openStream()
+    Files.copy(
+            is,
+            f.toPath(),
+            StandardCopyOption.REPLACE_EXISTING)
+
+    implementation files(f)
+
+    implementation "org.spongepowered:mixin:0.8.5"
 
     implementation "org.ow2.asm:asm:$asmVersion"
     implementation "org.ow2.asm:asm-analysis:$asmVersion"
@@ -37,5 +54,6 @@ dependencies {
     annotationProcessor "org.ow2.asm:asm-commons:$asmVersion"
     annotationProcessor "org.ow2.asm:asm-tree:$asmVersion"
     annotationProcessor "org.ow2.asm:asm-util:$asmVersion"
-
 }
+
+targetCompatibility = sourceCompatibility = JavaVersion.VERSION_17
