@@ -33,7 +33,7 @@ dependencies {
     File f = file("quixotic.jar") as File
     f.createNewFile()
 
-    def is = new URL("https://github.com/betterclient/quixotic-Loader/releases/gamer/download/Quixotic-1.0.jar").openStream()
+    def is = new URL("https://github.com/betterclient/quixotic-Loader/releases/validtag/download/Quixotic-1.0.jar").openStream()
     Files.copy(
             is,
             f.toPath(),
